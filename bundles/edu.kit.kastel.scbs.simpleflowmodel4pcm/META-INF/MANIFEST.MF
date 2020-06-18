@@ -1,7 +1,22 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: edu.kit.kastel.scbs.simpleflowmodel4pcm
-Bundle-SymbolicName: edu.kit.kastel.scbs.simpleflowmodel4pcm; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: edu.kit.kastel.scbs.simpleflowmodel4pcm;singleton:=true
+Automatic-Module-Name: edu.kit.kastel.scbs.simpleflowmodel4pcm
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: edu.kit.kastel.scbs.simpleflowmodel4pcm,
+ edu.kit.kastel.scbs.simpleflowmodel4pcm.impl,
+ edu.kit.kastel.scbs.simpleflowmodel4pcm.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.core.runtime
+ edu.kit.ipd.sdq.composition.securityanalyses.basic;visibility:=reexport,
+ de.uka.ipd.sdq.identifier;visibility:=reexport,
+ org.eclipse.core.runtime,
+ org.palladiosimulator.pcm;bundle-version="4.2.0";visibility:=reexport,
+ de.uka.ipd.sdq.probfunction;visibility:=reexport,
+ de.uka.ipd.sdq.stoex;visibility:=reexport,
+ de.uka.ipd.sdq.units;visibility:=reexport
+Bundle-ActivationPolicy: lazy

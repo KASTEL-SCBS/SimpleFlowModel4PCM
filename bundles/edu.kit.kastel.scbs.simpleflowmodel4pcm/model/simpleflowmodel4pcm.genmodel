@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.kastel.scbs.simpleflowmodel4pcm/src-gen"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/edu.kit.kastel.scbs.simpleflowmodel4pcm/src-gen"
     creationIcons="false" editDirectory="/edu.kit.kastel.scbs.simpleflowmodel4pcm.edit/src-gen"
     editorDirectory="/edu.kit.kastel.scbs.simpleflowmodel4pcm.editor/src-gen" modelPluginID="edu.kit.kastel.scbs.simpleflowmodel4pcm"
     modelName="Simpleflowmodel4pcm" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
-    copyrightFields="false" operationReflection="true" importOrganizing="true">
+    copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.composition.securityanalyses.basic/model/basic.genmodel#//basic ../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>simpleflowmodel4pcm.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Simpleflowmodel4pcm" basePackage="edu.kit.kastel.scbs" disposableProviderFactory="true"
-      ecorePackage="simpleflowmodel4pcm.ecore#/"/>
+      ecorePackage="simpleflowmodel4pcm.ecore#/">
+    <genClasses ecoreClass="simpleflowmodel4pcm.ecore#//Flows">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleflowmodel4pcm.ecore#//Flows/flow"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleflowmodel4pcm.ecore#//Flow">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleflowmodel4pcm.ecore#//Flow/sink"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simpleflowmodel4pcm.ecore#//Flow/source"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleflowmodel4pcm.ecore#//Source"/>
+    <genClasses ecoreClass="simpleflowmodel4pcm.ecore#//SignatureSource"/>
+    <genClasses ecoreClass="simpleflowmodel4pcm.ecore#//ParameterSource"/>
+    <genClasses ecoreClass="simpleflowmodel4pcm.ecore#//Sink"/>
+    <genClasses ecoreClass="simpleflowmodel4pcm.ecore#//SignatureIdentification">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleflowmodel4pcm.ecore#//SignatureIdentification/component"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleflowmodel4pcm.ecore#//SignatureIdentification/interface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleflowmodel4pcm.ecore#//SignatureIdentification/signature"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleflowmodel4pcm.ecore#//ParameterIdentification">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simpleflowmodel4pcm.ecore#//ParameterIdentification/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleflowmodel4pcm.ecore#//GenericSink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simpleflowmodel4pcm.ecore#//GenericSink/targetDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="simpleflowmodel4pcm.ecore#//SignatureSink"/>
+    <genClasses ecoreClass="simpleflowmodel4pcm.ecore#//ParameterSink"/>
+  </genPackages>
 </genmodel:GenModel>

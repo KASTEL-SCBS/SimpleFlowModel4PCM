@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    name="simpleflowmodel4pcm" nsURI="http://www.example.org/simpleflowmodel4pcm"
-    nsPrefix="simpleflowmodel4pcm"/>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="simpleflowmodel4pcm" nsURI="http://www.example.org/simpleflowmodel4pcm"
+    nsPrefix="simpleflowmodel4pcm">
+  <eClassifiers xsi:type="ecore:EClass" name="Flows">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flow" upperBound="-1" eType="#//Flow"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Flow" eSuperTypes="../../edu.kit.ipd.sdq.composition.securityanalyses.basic/model/basic.ecore#//IdentifiedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sink" lowerBound="1" upperBound="-1"
+        eType="#//Sink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        upperBound="-1" eType="#//Source" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Source" eSuperTypes="../../edu.kit.ipd.sdq.composition.securityanalyses.basic/model/basic.ecore#//IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SignatureSource" eSuperTypes="#//SignatureIdentification #//Source"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterSource" eSuperTypes="#//SignatureSource #//ParameterIdentification"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sink" eSuperTypes="../../edu.kit.ipd.sdq.composition.securityanalyses.basic/model/basic.ecore#//IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SignatureIdentification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" lowerBound="1"
+        eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/RepositoryComponent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
+        eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signature" lowerBound="1"
+        eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/OperationSignature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterIdentification" eSuperTypes="#//SignatureIdentification">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/Parameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GenericSink" eSuperTypes="#//Sink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetDescription" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SignatureSink" eSuperTypes="#//Sink #//SignatureIdentification"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterSink" eSuperTypes="#//Sink #//ParameterIdentification"/>
+</ecore:EPackage>

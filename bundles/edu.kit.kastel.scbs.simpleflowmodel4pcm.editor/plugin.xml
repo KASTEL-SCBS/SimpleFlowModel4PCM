@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated simpleflowmodel4pcm -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.kastel.scbs.simpleflowmodel4pcm.presentation.Simpleflowmodel4pcmModelWizardID"
+            name="%_UI_Simpleflowmodel4pcmModelWizard_label"
+            class="edu.kit.kastel.scbs.simpleflowmodel4pcm.presentation.Simpleflowmodel4pcmModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Simpleflowmodel4pcmModelFile.gif">
+         <description>%_UI_Simpleflowmodel4pcmModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated simpleflowmodel4pcm -->
+      <editor
+            id="edu.kit.kastel.scbs.simpleflowmodel4pcm.presentation.Simpleflowmodel4pcmEditorID"
+            name="%_UI_Simpleflowmodel4pcmEditor_label"
+            icon="icons/full/obj16/Simpleflowmodel4pcmModelFile.gif"
+            extensions="simpleflowmodel4pcm"
+            class="edu.kit.kastel.scbs.simpleflowmodel4pcm.presentation.Simpleflowmodel4pcmEditor"
+            contributorClass="edu.kit.kastel.scbs.simpleflowmodel4pcm.presentation.Simpleflowmodel4pcmActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
