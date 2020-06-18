@@ -119,29 +119,6 @@ public class Simpleflowmodel4pcmItemProviderAdapterFactory extends Simpleflowmod
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.kastel.scbs.simpleflowmodel4pcm.Source} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SourceItemProvider sourceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.kastel.scbs.simpleflowmodel4pcm.Source}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSourceAdapter() {
-		if (sourceItemProvider == null) {
-			sourceItemProvider = new SourceItemProvider(this);
-		}
-
-		return sourceItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.kastel.scbs.simpleflowmodel4pcm.SignatureSource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -185,29 +162,6 @@ public class Simpleflowmodel4pcmItemProviderAdapterFactory extends Simpleflowmod
 		}
 
 		return parameterSourceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.kastel.scbs.simpleflowmodel4pcm.Sink} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SinkItemProvider sinkItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.kastel.scbs.simpleflowmodel4pcm.Sink}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSinkAdapter() {
-		if (sinkItemProvider == null) {
-			sinkItemProvider = new SinkItemProvider(this);
-		}
-
-		return sinkItemProvider;
 	}
 
 	/**
@@ -428,14 +382,10 @@ public class Simpleflowmodel4pcmItemProviderAdapterFactory extends Simpleflowmod
 			flowsItemProvider.dispose();
 		if (flowItemProvider != null)
 			flowItemProvider.dispose();
-		if (sourceItemProvider != null)
-			sourceItemProvider.dispose();
 		if (signatureSourceItemProvider != null)
 			signatureSourceItemProvider.dispose();
 		if (parameterSourceItemProvider != null)
 			parameterSourceItemProvider.dispose();
-		if (sinkItemProvider != null)
-			sinkItemProvider.dispose();
 		if (signatureIdentificationItemProvider != null)
 			signatureIdentificationItemProvider.dispose();
 		if (parameterIdentificationItemProvider != null)

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated simpleflowmodel4pcm -->
+      <package
+            uri="http://www.example.org/simpleflowmodel4pcm"
+            class="simpleflowmodel4pcm.Simpleflowmodel4pcmPackage"
+            genModel="bundles/edu.kit.kastel.scbs.simpleflowmodel4pcm/model/simpleflowmodel4pcm.genmodel"/>
+   </extension>
+
+</plugin>

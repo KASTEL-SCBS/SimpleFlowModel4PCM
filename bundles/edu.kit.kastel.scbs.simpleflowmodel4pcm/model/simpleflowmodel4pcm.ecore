@@ -10,12 +10,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="sink" lowerBound="1" upperBound="-1"
         eType="#//Sink" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        upperBound="-1" eType="#//Source" containment="true"/>
+        eType="#//Source" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Source" eSuperTypes="../../edu.kit.ipd.sdq.composition.securityanalyses.basic/model/basic.ecore#//IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Source" abstract="true" eSuperTypes="../../edu.kit.ipd.sdq.composition.securityanalyses.basic/model/basic.ecore#//IdentifiedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="SignatureSource" eSuperTypes="#//SignatureIdentification #//Source"/>
   <eClassifiers xsi:type="ecore:EClass" name="ParameterSource" eSuperTypes="#//SignatureSource #//ParameterIdentification"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Sink" eSuperTypes="../../edu.kit.ipd.sdq.composition.securityanalyses.basic/model/basic.ecore#//IdentifiedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sink" abstract="true" eSuperTypes="../../edu.kit.ipd.sdq.composition.securityanalyses.basic/model/basic.ecore#//IdentifiedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="SignatureIdentification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="component" lowerBound="1"
         eType="ecore:EClass ../../org.palladiosimulator.pcm/model/pcm.ecore#//repository/RepositoryComponent"/>

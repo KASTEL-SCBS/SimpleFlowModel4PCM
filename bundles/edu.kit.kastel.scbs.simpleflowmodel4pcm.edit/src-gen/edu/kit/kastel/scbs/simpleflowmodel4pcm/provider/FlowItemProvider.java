@@ -3,6 +3,7 @@
 package edu.kit.kastel.scbs.simpleflowmodel4pcm.provider;
 
 import edu.kit.ipd.sdq.composition.securityanalyses.basic.provider.IdentifiedElementItemProvider;
+
 import edu.kit.kastel.scbs.simpleflowmodel4pcm.Flow;
 import edu.kit.kastel.scbs.simpleflowmodel4pcm.Simpleflowmodel4pcmFactory;
 import edu.kit.kastel.scbs.simpleflowmodel4pcm.Simpleflowmodel4pcmPackage;
@@ -149,9 +150,6 @@ public class FlowItemProvider extends IdentifiedElementItemProvider {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(Simpleflowmodel4pcmPackage.Literals.FLOW__SINK,
-				Simpleflowmodel4pcmFactory.eINSTANCE.createSink()));
-
-		newChildDescriptors.add(createChildParameter(Simpleflowmodel4pcmPackage.Literals.FLOW__SINK,
 				Simpleflowmodel4pcmFactory.eINSTANCE.createGenericSink()));
 
 		newChildDescriptors.add(createChildParameter(Simpleflowmodel4pcmPackage.Literals.FLOW__SINK,
@@ -159,9 +157,6 @@ public class FlowItemProvider extends IdentifiedElementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(Simpleflowmodel4pcmPackage.Literals.FLOW__SINK,
 				Simpleflowmodel4pcmFactory.eINSTANCE.createParameterSink()));
-
-		newChildDescriptors.add(createChildParameter(Simpleflowmodel4pcmPackage.Literals.FLOW__SOURCE,
-				Simpleflowmodel4pcmFactory.eINSTANCE.createSource()));
 
 		newChildDescriptors.add(createChildParameter(Simpleflowmodel4pcmPackage.Literals.FLOW__SOURCE,
 				Simpleflowmodel4pcmFactory.eINSTANCE.createSignatureSource()));

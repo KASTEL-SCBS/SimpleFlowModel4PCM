@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated basic -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="edu.kit.ipd.sdq.composition.securityanalyses.basic.presentation.BasicModelWizardID"
+            name="%_UI_BasicModelWizard_label"
+            class="edu.kit.ipd.sdq.composition.securityanalyses.basic.presentation.BasicModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BasicModelFile.gif">
+         <description>%_UI_BasicModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated basic -->
+      <editor
+            id="edu.kit.ipd.sdq.composition.securityanalyses.basic.presentation.BasicEditorID"
+            name="%_UI_BasicEditor_label"
+            icon="icons/full/obj16/BasicModelFile.gif"
+            extensions="basic"
+            class="edu.kit.ipd.sdq.composition.securityanalyses.basic.presentation.BasicEditor"
+            contributorClass="edu.kit.ipd.sdq.composition.securityanalyses.basic.presentation.BasicActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

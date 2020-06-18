@@ -10,6 +10,8 @@
     <semanticResources>platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore</semanticResources>
     <semanticResources>../plugin.xml</semanticResources>
     <semanticResources>platform:/resource/edu.kit.ipd.sdq.composition.securityanalyses.basic/model/basic.ecore</semanticResources>
+    <semanticResources>platform:/resource/edu.kit.ipd.sdq.composition.securityanalyses.basic/model/basic.genmodel</semanticResources>
+    <semanticResources>simpleflowmodel4pcm.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_Te4-4LEvEeqN4tA7dOHfvA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.sirius.sample.ecore.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_TlXaULEvEeqN4tA7dOHfvA" name="simpleflowmodel4pcm package entities" repPath="#_TiwyQLEvEeqN4tA7dOHfvA">

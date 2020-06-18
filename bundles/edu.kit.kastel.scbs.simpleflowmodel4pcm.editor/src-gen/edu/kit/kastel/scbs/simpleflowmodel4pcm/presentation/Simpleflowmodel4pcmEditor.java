@@ -164,6 +164,7 @@ import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
 import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
 
 import edu.kit.ipd.sdq.composition.securityanalyses.basic.provider.BasicItemProviderAdapterFactory;
+
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 import org.palladiosimulator.pcm.allocation.provider.AllocationItemProviderAdapterFactory;
